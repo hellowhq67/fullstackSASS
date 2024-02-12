@@ -1,13 +1,11 @@
 .wrapper {
   display: flex;
- position:relative;
-  
- 
+  position: relative;
 }
 .bar {
-  width: 15vw;
+  width: 19vw;
   height: 100vh;
-  background-color: #1e1e1e;
+  background-color: #fff8f813;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.586);
   display: flex;
   align-items: flex-start;
@@ -22,50 +20,48 @@
 .lists li {
   cursor: pointer;
   list-style: none;
-  color: rgb(111, 107, 107);
+  color: rgb(17, 45, 48);
   font-size: 20px;
-  margin: 30px 0px;
-  width: 100%;
   height: 40px;
+  margin: 40px 0px;
+  transition: .3s ease;
 }
 .lists li:hover {
-  background-color: rgba(240, 248, 255, 0.552);
-  color: aquamarine;
+  background: rgba(223, 225, 227, 0.552);
 }
-.userwrapper{
+.userwrapper {
   display: flex;
 }
 
-.addusercon{
- background-color: black;
- width: 100%;
- height: 100vh;
- padding: 20px;
+.addusercon {
+  background-color: rgba(240, 238, 238, 0.778);
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
 }
-.td{
+.td {
   padding: 20px 40px;
 }
-.from{
+.from {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-.from span{
- color: gray;
+.from span {
+  color: gray;
 }
-.inputs{
-  width: 85vw;
-  
+.inputs {
+  width: 35vw;
+  background: whitesmoke;
   margin: 2rem 0px;
   padding: 10px 20px;
   border-radius: 10px;
-  background: var(--bg-1);
   color: aqua;
 }
-.btn2{
+.btn2 {
+  width: 200px;
   padding: 10px 20px;
   border-radius: 10px;
   background: var(--bg-1);
   color: whitesmoke;
-  
 }

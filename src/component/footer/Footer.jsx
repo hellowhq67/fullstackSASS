@@ -7,7 +7,7 @@ export default function Footer() {
       <div className={styles.wrapper}>
         <div className={styles.col}>
           <div>
-            <h1 className={styles.logo}>Mythscape</h1>
+            <h1 className={styles.logo}>FLOOR PLAN APP</h1>
             <div>
               <input type="text" className={styles.input} />
               <button className={styles.btn}>News Latter</button>
@@ -23,10 +23,10 @@ export default function Footer() {
         </div>
         <div className={styles.col}>
           <h2>CETAGORY</h2>
-          <Link className={styles.a} href="">Tech</Link>
-          <Link className={styles.a} href="">News</Link>
-          <Link className={styles.a} href="">Trends</Link>
-          <Link className={styles.a} href="">Movies</Link>
+          <Link className={styles.a} href="" >CREATE TASK</Link>
+          <Link className={styles.a} href="" >POSTS </Link>
+          <Link className={styles.a} href="">HISTORY </Link>
+          <Link className={styles.a} href="">SETTINGS</Link>
         </div>
       </div>
       <div className={styles.icons}>

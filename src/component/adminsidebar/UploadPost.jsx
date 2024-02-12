@@ -69,7 +69,7 @@ const UserRegistrationForm = () => {
             value={pdf}
             onChange={(e) => setPDF(e.target.value)}
           />
-        <button className={styles.btn2} type="submit">ADD USER</button>
+        <button className={styles.btn2} type="submit">Upload Post</button>
       </form>
      
     </div>

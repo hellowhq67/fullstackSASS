@@ -42,6 +42,29 @@
     font-weight: bold;
     
 }
-@media (m) {
+@media (max-width:750px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 2rem 2rem;
+        flex-wrap: wrap-reverse;
+        height: 100%;
     
+
+    }
+    .h1{
+        font-size: 3rem;
+    }
+    .p{
+        font-size: 14px;
+    }
+    .textCol{
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .img{
+        width: 100%;
+        object-fit: contain;
+    }
 }

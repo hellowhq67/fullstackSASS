@@ -1,12 +1,10 @@
+const nodeExternals = require('webpack-node-externals');
+
 module.exports = {
-    // Other webpack configuration...
-    module: {
-      rules: [
-        {
-          test: /\.node$/,
-          use: 'file-loader'
-        }
-      ]
-    }
-  };
-  
+    // other configuration options...
+    externals: [
+        nodeExternals({
+            allowlist: ['canvas'],
+        }),
+    ],
+};

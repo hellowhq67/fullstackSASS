@@ -9,13 +9,12 @@ import Footer from '@/component/footer/Footer'
 export default function page() {
   return (
     <>
-    
-    <Navbar/>
- 
-    <Banner/>
-    <Blog/>
-    <Card/>
-  <Footer/>
+
+      <Navbar />
+
+      <Banner />
+      <Blog />
+      <Footer />
 
     </>
   )

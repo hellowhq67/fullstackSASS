@@ -10,14 +10,11 @@ export default function Index2() {
       alt=""
     />
     <div className={style.textCol}>
-      <h1 className={style.h1}>Know what you've built</h1>
-      <p className={style.p}>
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis libero,
-        minima voluptate quam nulla optio. Optio veniam praesentium quis!
-        Voluptates dignissimos neque delectus adipisci possimus in sequi, nam
-        modi unde!
-      </p>
+    <h1 className={style.h1}>Know what you havve built</h1>
+  <p className={style.p}>
+    {" "}
+    A culture of quality and safety leads to improved professional pride in the industry With Congrid everyone takes personal responsibility for delivering work on time with the highest quality and safety standards 
+  </p>
       <div>
         
         

@@ -3,12 +3,10 @@ import mongoose, { Schema } from "mongoose";
 
 const topicSchema = new Schema(
   {
-   id:String,
    title:String,
    desc:String,
    img:String,
-   pdf:File,
-
+   link:String,
   },
   {
     timestamps: true,
