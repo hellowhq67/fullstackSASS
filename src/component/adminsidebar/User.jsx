@@ -1,36 +1,13 @@
-"use client";
+// Import necessary modules
 import style from "./style.module.css";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Deletebtn from "./Deletebtn";
 
-export default function User() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    // Fetch users from API
-    fetchUsers();
-  }, []);
-
-  const fetchUsers = async () => {
-    try {
-      const response = await fetch("https://fullstack-sass-79w7piblh-hellowhq67.vercel.app/api/users");
-      if (response.ok) {
-        const data = await response.json();
-        setUsers(data.users);
-        console.log(data.users); // Assuming the response has a structure like { users: [...] }
-      } else {
-        console.error("Failed to fetch users:", response.statusText);
-      }
-    } catch (error) {
-      console.error("Error fetching users:", error);
-    }
-  };
-
-
+// Define your functional component
+export default function User({ users }) {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Users</h1>
-    
       <table
         style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}
       >
@@ -56,7 +33,6 @@ export default function User() {
             >
               DATE
             </th>
-
             {/* Add more columns if needed */}
           </tr>
         </thead>
@@ -84,9 +60,8 @@ export default function User() {
                 {user.createdAt}
               </td>
               <td>
-               <Deletebtn id={user._id}/>
+                <Deletebtn id={user._id} />
               </td>
-
               {/* Add more cells if needed */}
             </tr>
           ))}
@@ -94,4 +69,30 @@ export default function User() {
       </table>
     </>
   );
+}
+
+// Implement getServerSideProps function to fetch data on the server-side
+export async function getServerSideProps() {
+  try {
+    // Fetch users from API
+    const response = await fetch("https://fullstack-sass-79w7piblh-hellowhq67.vercel.app/api/users");
+    if (response.ok) {
+      const data = await response.json();
+      const users = data.users;
+      // Return users as props
+      return {
+        props: { users }
+      };
+    } else {
+      console.error("Failed to fetch users:", response.statusText);
+      return {
+        props: { users: [] } // Return empty array in case of error
+      };
+    }
+  } catch (error) {
+    console.error("Error fetching users:", error);
+    return {
+      props: { users: [] } // Return empty array in case of error
+    };
+  }
 }
